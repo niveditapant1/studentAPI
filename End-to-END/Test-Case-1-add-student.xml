@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="f63034d4-dcd3-41a9-a8ae-2133e0fae65f" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Test Case 1-add student" searchProperties="true" timeout="0">
+  <con:settings>
+    <con:setting id="f63034d4-dcd3-41a9-a8ae-2133e0fae65ffileName">Test-Case-1-add-student</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="REST Request" id="fdb84e67-2d07-4b57-a013-4ffe36da995b">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="https://thetestingworldapi.com" resourcePath="/api/studentsDetails" methodName="Method 2" xsi:type="con:RestRequestStep">
+      <con:restRequest name="REST Request" id="37e4c2bb-370d-4f1d-b50a-8cd2b0434681" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://thetestingworldapi.com</con:endpoint>
+        <con:request>{
+    "first_name": "John",
+    "middle_name": "A",
+    "last_name": "Doe",
+    "date_of_birth": "01/01/1990"
+}</con:request>
+        <con:originalUri>https://thetestingworldapi.com/api/studentsDetails</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="011cb813-cc16-44e4-8bec-2faa6059e420" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="82864dce-01fe-4324-b579-129c284ebab9" name="Response SLA">
+          <con:configuration>
+            <SLA>2000</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:parameterOrder/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="properties" name="Properties 1-studentid" id="9a58d819-2c18-437d-8463-d04f0c3fcc95">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:PropertiesStep" saveFirst="true">
+      <con:properties>
+        <con:property>
+          <con:name>id</con:name>
+          <con:value>10889759</con:value>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="properties" name="Properties 1-name" id="79ab8923-b53e-456e-a79a-10bc5c0c6d34">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:PropertiesStep" saveFirst="true">
+      <con:properties>
+        <con:property>
+          <con:name>first_name</con:name>
+          <con:value>John</con:value>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="properties" name="Properties 1-lastname" id="76e3123b-fcdd-49e9-8145-0a941a5bc2f3">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:PropertiesStep" saveFirst="true">
+      <con:properties>
+        <con:property>
+          <con:name>last_name</con:name>
+          <con:value>Doe</con:value>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="properties" name="Properties 1-dob" id="6985038f-649a-45de-af05-c2df0698b130">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:PropertiesStep" saveFirst="true">
+      <con:properties>
+        <con:property>
+          <con:name>date_of_birth</con:name>
+          <con:value>01/01/1990</con:value>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="PropertyTransfer 1" id="00b3244a-f025-4ac0-87a6-26570e6c4503">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:PropertyTransfersStep">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>id</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>REST Request</con:sourceStep>
+        <con:sourcePath>$['id']</con:sourcePath>
+        <con:targetType>id</con:targetType>
+        <con:targetStep>Properties 1-studentid</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true">
+        <con:name>first_name</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>REST Request</con:sourceStep>
+        <con:sourcePath>$['first_name']</con:sourcePath>
+        <con:targetType>first_name</con:targetType>
+        <con:targetStep>Properties 1-name</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true">
+        <con:name>last_name</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>REST Request</con:sourceStep>
+        <con:sourcePath>$['last_name']</con:sourcePath>
+        <con:targetType>last_name</con:targetType>
+        <con:targetStep>Properties 1-lastname</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true">
+        <con:name>date_of_birth</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>REST Request</con:sourceStep>
+        <con:sourcePath>$['date_of_birth']</con:sourcePath>
+        <con:targetType>date_of_birth</con:targetType>
+        <con:targetStep>Properties 1-dob</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="eND TO END" path="api/studentsDetails" id="86c1e2e5-633a-46e1-baa0-05ab70ceaada">
+  <con:settings>
+    <con:setting id="86c1e2e5-633a-46e1-baa0-05ab70ceaadafileName">eND-TO-END</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Method 1-delete" id="7d4e3142-f7da-4d98-b222-bab7e29dab4a" method="DELETE">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="4c2fb9c1-b085-40d7-93a2-065a66ac0b80" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://thetestingworldapi.com/</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="Method 2" id="f89bc3ae-9238-4998-ac31-2237d8dea006" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:element xmlns:stud="https://thetestingworldapi.com/api/studentsDetails">stud:Response</con:element>
+    </con:representation>
+    <con:request name="Request 1-add" id="37e4c2bb-370d-4f1d-b50a-8cd2b0434681" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://thetestingworldapi.com</con:endpoint>
+      <con:request>{
+    "first_name": "Johnyn",
+    "middle_name": "A",
+    "last_name": "Doe",
+    "date_of_birth": "01/01/1990"
+}</con:request>
+      <con:originalUri>https://thetestingworldapi.com/api/studentsDetails</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder/>
+    </con:request>
+  </con:method>
+  <con:method name="gET Method 3" id="97b73d98-fc54-42a8-99e8-317ecad088d6" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element>Response</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="b87657bf-3be9-40cb-aa8e-6718cc3f6521" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://thetestingworldapi.com/</con:endpoint>
+      <con:request/>
+      <con:originalUri>https://thetestingworldapi.com/api/studentsDetails</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="Method 4" id="f5106368-f761-4802-9400-8155f27accdd" method="PUT">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>405</con:status>
+      <con:params/>
+      <con:element xmlns:stud="https://thetestingworldapi.com/api/studentsDetails">stud:Fault</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="6147328a-0e9d-4a93-b79f-c03080c2c724" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://thetestingworldapi.com/</con:endpoint>
+      <con:request>{
+  "id": 1,
+  "first_name": "sample string 2",
+  "middle_name": "sample string 3",
+  "last_name": "sample string 4",
+  "date_of_birth": "sample string 5"
+}</con:request>
+      <con:originalUri>https://thetestingworldapi.com/api/studentsDetails</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite xmlns:con="http://eviware.com/soapui/config" id="91c1ef25-a04d-4953-b5a2-933d11c3e8a4" name="End to END">
+  <con:settings id="2071b192-eb04-47be-9a6d-3e74cf3b8ba2">
+    <con:setting id="91c1ef25-a04d-4953-b5a2-933d11c3e8a4fileName">End-to-END</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

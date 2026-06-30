@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="StudentsDetails" path="/api/studentsDetails/ID" id="f2d55bdd-9af7-47b7-ba1e-56f7ac4631e7">
+  <con:settings>
+    <con:setting id="f2d55bdd-9af7-47b7-ba1e-56f7ac4631e7fileName">StudentsDetails</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="StudentsDetails" id="176aa7f7-2a23-4626-beeb-1b40818fafcf" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Id</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element>Response</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:element xmlns:stud="https://thetestingworldapi.com/api/studentsDetails">stud:Fault</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="d06f4c5f-6722-45a4-90bd-a268a47c1133" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://thetestingworldapi.com</con:endpoint>
+      <con:request/>
+      <con:originalUri>https://thetestingworldapi.com/api/studentsDetails</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="Id" value="10889735"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>Id</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

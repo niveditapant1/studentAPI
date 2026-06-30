@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" xsi:type="con:RestService" id="207dfdb7-e3f2-4237-b7ce-d1ffa7cb95be" lastUpdated="2026-06-29T10:05:00.436-05:00" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://thetestingworldapi.com" type="rest">
+  <con:settings id="2ad42681-d75d-4b55-b16a-0cffa26e3586">
+    <con:setting id="207dfdb7-e3f2-4237-b7ce-d1ffa7cb95befileName">https%3A%2F%2Fthetestingworldapi.com</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart=""/>
+  <con:endpoints>
+    <con:endpoint>https://thetestingworldapi.com</con:endpoint>
+  </con:endpoints>
+</con:interface>
