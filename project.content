@@ -4,3 +4,6 @@ https%3A%2F%2Fthetestingworldapi.com-Test-Suite\https%3A%2F%2Fthetestingworldapi
 End-to-END\Test-Case-1-add-student.xml
 End-to-END\get-student.xml
 End-to-END\get-student-another.xml
+End-to-END-final\Test-Case-1-add-student.xml
+End-to-END-final\get-student.xml
+End-to-END-final\get-student-another.xml

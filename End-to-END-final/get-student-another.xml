@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="29d58b35-9a9c-4fcb-9b87-99ae815d9219" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="get student another" searchProperties="true" timeout="0">
+  <con:settings>
+    <con:setting id="44e87673-1799-444b-9ace-12e5df96b57ffileName">get-student-another</con:setting>
+    <con:setting id="29d58b35-9a9c-4fcb-9b87-99ae815d9219fileName">get-student-another</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="REST Request" id="52294d22-76e3-477c-aea7-19b6bfaa49a1">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="https://thetestingworldapi.com" resourcePath="/api/studentsDetails/ID" methodName="StudentsDetails" xsi:type="con:RestRequestStep">
+      <con:restRequest name="REST Request" id="d06f4c5f-6722-45a4-90bd-a268a47c1133" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://thetestingworldapi.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://thetestingworldapi.com/api/studentsDetails</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="08dfd4ac-104f-466f-b4b8-b5f081ddd34d" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="02cab58d-706b-4ecb-9f1a-e5c4ba727fde" name="Response SLA">
+          <con:configuration>
+            <SLA>2000</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="Id" value="${#[End to END#Test Case 1-add student#Properties 1-studentid]#id}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>Id</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
